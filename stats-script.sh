@@ -1,5 +1,6 @@
+mkdir $1
+
 for datafile in *.txt
 do
-    echo $datafile >> out.txt
-    bash goostats $datafile | head -1 >> output.txt
+    bash goostats $datafile | head -1 > $1/stats-$datafile
 done
